@@ -5,7 +5,7 @@ module.exports = {
   bracketSameLine: true,
   bracketSpacing: true,
   trailingComma: "all",
-  printWidth: 100,
+  printWidth: 80,
   arrowParens: "always",
   endOfLine: "auto",
 };
