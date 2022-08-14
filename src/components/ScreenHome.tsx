@@ -19,12 +19,6 @@ import Loading from "./Loading";
 
 const windowWidth = Dimensions.get("window").width;
 
-export interface cardListProps {
-  id: number;
-  title: string;
-  content: string;
-}
-
 function ScreenHome() {
   const [cardList, setCardList] = useState([] as any);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -57,6 +51,7 @@ function ScreenHome() {
       } = await axios.get(CUPIST_URL.INRODUCTION_ADDITIONAL);
 
       setCardList([...cardList, ...data]);
+      setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       console.log(error);
@@ -69,6 +64,13 @@ function ScreenHome() {
     } else {
       getAdditionalCardList();
     }
+  };
+
+  const deleteCard = (id: number) => {
+    const filteredData = cardList.filter(
+      (item: { id: number }) => item.id !== id,
+    );
+    setCardList(filteredData);
   };
 
   return (
@@ -84,8 +86,16 @@ function ScreenHome() {
         onEndReached={handleOnEndReached}
         keyExtractor={(item) => item?.id}
         renderItem={({ item, index }) => {
-          const { name, age, introduction, job, distance, height, pictures } =
-            item;
+          const {
+            name,
+            age,
+            introduction,
+            job,
+            distance,
+            height,
+            pictures,
+            id,
+          } = item;
           const picture = pictures[0];
 
           return (
@@ -123,10 +133,14 @@ function ScreenHome() {
                   </LinearGradient>
 
                   <View style={styles.buttonBox}>
-                    <TouchableOpacity style={styles.deleteBtn}>
+                    <TouchableOpacity
+                      style={styles.deleteBtn}
+                      onPress={() => deleteCard(id)}>
                       <Image source={IMAGES.DELETE} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.likeBtn}>
+                    <TouchableOpacity
+                      style={styles.likeBtn}
+                      onPress={() => deleteCard(id)}>
                       <Text style={styles.like}>좋아요</Text>
                     </TouchableOpacity>
                   </View>
