@@ -13,42 +13,61 @@ import LinearGradient from "react-native-linear-gradient";
 
 import axios from "axios";
 
-import { IMAGES } from "../constant";
+import { CUPIST_URL, IMAGES } from "../constant";
+import ScreenHomeCustom from "./ScreenHomeCustom";
+import Loading from "./Loading";
 
 const windowWidth = Dimensions.get("window").width;
 
+export interface cardListProps {
+  id: number;
+  title: string;
+  content: string;
+}
+
 function ScreenHome() {
-  const [cardList, setCardList] = useState<null>(null);
-  const [additionalCardList, setAdditionalCardList] = useState(null);
+  const [cardList, setCardList] = useState([] as any);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setIsLoading(true);
     getTodayCardList();
-    getAdditionalCardList();
+    getTodayCardList();
   }, []);
 
   const getTodayCardList = async () => {
     try {
       const {
         data: { data },
-      } = await axios.get("https://test.dev.cupist.de/introduction");
+      } = await axios.get(CUPIST_URL.INRODUCTION);
 
       setCardList(data);
+      setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
     }
   };
 
   const getAdditionalCardList = async () => {
     try {
+      setIsLoading(true);
       const {
         data: { data },
-      } = await axios.get("https://test.dev.cupist.de/introduction/additional");
+      } = await axios.get(CUPIST_URL.INRODUCTION_ADDITIONAL);
 
-      console.log("CardList: ", data);
-
-      setAdditionalCardList(data);
+      setCardList([...cardList, ...data]);
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
+    }
+  };
+
+  const handleOnEndReached = () => {
+    if (isLoading) {
+      return;
+    } else {
+      getAdditionalCardList();
     }
   };
 
@@ -56,64 +75,73 @@ function ScreenHome() {
     <SafeAreaView style={styles.container}>
       <FlatList
         numColumns={1}
+        removeClippedSubviews
         showsVerticalScrollIndicator={false}
         data={cardList}
-        extraData={additionalCardList}
+        ListFooterComponent={() => {
+          return isLoading ? <Loading color={"#4B9CFF"} /> : <></>;
+        }}
+        onEndReached={handleOnEndReached}
         keyExtractor={(item) => item?.id}
-        renderItem={({ item }) => {
+        renderItem={({ item, index }) => {
           const { name, age, introduction, job, distance, height, pictures } =
             item;
           const picture = pictures[0];
 
           return (
-            <View style={styles.card}>
-              <TouchableOpacity style={{ width: "100%" }}>
-                <Image
-                  style={{ height: "100%" }}
-                  source={{ uri: `https://test.dev.cupist.de${picture}` }}
-                />
-              </TouchableOpacity>
-              <View style={styles.cardInfo}>
-                <View style={styles.recommendationBox}>
-                  <Text style={styles.recommendation}>오늘의 추천</Text>
-                </View>
-                <LinearGradient colors={["#333333", "#33333300"]}>
-                  <Text style={styles.name}>
-                    {name}, {age}&nbsp;
-                    <Image source={IMAGES.INFO} />
-                  </Text>
-                  <View>
-                    {introduction ? (
-                      <Text style={styles.introduction}>{introduction}</Text>
-                    ) : (
-                      <>
-                        <Text style={styles.job_distance}>
-                          {job}・{distance / 1000}km
-                        </Text>
-                        <Text style={styles.height}>{height}cm</Text>
-                      </>
-                    )}
-                  </View>
-                </LinearGradient>
+            <>
+              <View style={styles.card}>
+                <TouchableOpacity style={{ width: "100%" }}>
+                  <Image
+                    style={{ height: "100%" }}
+                    source={{ uri: CUPIST_URL.DEFAULT + picture }}
+                  />
+                </TouchableOpacity>
+                <View style={styles.cardInfo}>
+                  {index < 2 ? (
+                    <View style={styles.recommendationBox}>
+                      <Text style={styles.recommendation}>오늘의 추천</Text>
+                    </View>
+                  ) : null}
+                  <LinearGradient colors={["#333333", "#33333300"]}>
+                    <Text style={styles.name}>
+                      {name}, {age}&nbsp;
+                      <Image source={IMAGES.INFO} />
+                    </Text>
+                    <View>
+                      {introduction ? (
+                        <Text style={styles.introduction}>{introduction}</Text>
+                      ) : (
+                        <>
+                          <Text style={styles.job_distance}>
+                            {job}・{distance / 1000}km
+                          </Text>
+                          <Text style={styles.height}>{height}cm</Text>
+                        </>
+                      )}
+                    </View>
+                  </LinearGradient>
 
-                <View style={styles.buttonBox}>
-                  <TouchableOpacity style={styles.deleteBtn}>
-                    <Image
-                      source={require("../../assets/icon/main/delete.png")}
-                    />
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.likeBtn}>
-                    <Text style={styles.like}>좋아요</Text>
-                  </TouchableOpacity>
+                  <View style={styles.buttonBox}>
+                    <TouchableOpacity style={styles.deleteBtn}>
+                      <Image source={IMAGES.DELETE} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.likeBtn}>
+                      <Text style={styles.like}>좋아요</Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
               </View>
-            </View>
+              {index === 1 ? (
+                <ScreenHomeCustom
+                  cardList={cardList}
+                  setCardList={setCardList}
+                />
+              ) : null}
+            </>
           );
         }}
       />
-      <View style={styles.customRecommendationBox}>
-        <Text>맞춤 추천</Text>
-      </View>
     </SafeAreaView>
   );
 }
@@ -200,10 +228,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "bold",
     color: "#FFFFFF",
-  },
-  customRecommendationBox: {
-    height: 350,
-    borderWidth: 1,
   },
 });
 
