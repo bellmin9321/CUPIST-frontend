@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import RootNavigation from "../navigation/RootNavigation";
+import { StatusBar, View } from "react-native";
+import { GlobalStyle } from "../utils/globalStyle";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,7 +22,8 @@ const queryClient = new QueryClient({
 
 export default function App() {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider style={GlobalStyle.app}>
+      <StatusBar backgroundColor={"white"} barStyle={"dark-content"} />
       <NavigationContainer>
         <QueryClientProvider client={queryClient}>
           <RootNavigation />
