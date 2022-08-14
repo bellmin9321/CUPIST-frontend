@@ -21,6 +21,14 @@ export type NavRouteInfo = {
   icon?: string;
 };
 
+export const CUPIST_URL = {
+  DEFAULT: "https://test.dev.cupist.de",
+  INRODUCTION: "https://test.dev.cupist.de/introduction",
+  INRODUCTION_ADDITIONAL: "https://test.dev.cupist.de/introduction/additional",
+  INRODUCTION_CUSTOM: "https://test.dev.cupist.de/introduction/custom",
+  PROFILE: "https://test.dev.cupist.de/profile",
+};
+
 export const IMAGES = {
   HOME: require("../../assets/icon/nav/home.png"),
   LIVE: require("../../assets/icon/nav/live.png"),
