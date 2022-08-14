@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {
-  Button,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import axios from "axios";
 import { CUPIST_URL, IMAGES } from "../constant";
 
-function ScreenHomeCustom({ cardList, setCardList }: any) {
+function HomeCustom({ cardList, setCardList }: any) {
   const [isSelected, setIsSelected] = useState<boolean>(false);
 
   useEffect(() => {
@@ -157,4 +150,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ScreenHomeCustom;
+export default HomeCustom;
