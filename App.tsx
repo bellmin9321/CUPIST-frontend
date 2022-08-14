@@ -1,12 +1,12 @@
 import "react-native-gesture-handler";
 import * as React from "react";
+import { StatusBar } from "react-native";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { NavigationContainer } from "@react-navigation/native";
-
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import RootNavigation from "../navigation/RootNavigation";
-import { StatusBar, View } from "react-native";
-import { GlobalStyle } from "../utils/globalStyle";
+
+import RootNavigation from "./src/navigation/RootNavigation";
+import { GlobalStyle } from "./src/utils/globalStyle";
 
 const queryClient = new QueryClient({
   defaultOptions: {
