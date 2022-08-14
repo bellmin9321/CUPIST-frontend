@@ -4,7 +4,7 @@ import ScreenHome from "../components/ScreenHome";
 import ScreenLike from "../components/ScreenLike";
 import ScreenLive from "../components/ScreenLive";
 import ScreenTalk from "../components/ScreenTalk";
-import ScreenProfile from "../components/ScreenProfile";
+import ScreenProfile from "../components/ScreenProfileEdit";
 
 export enum TabName {
   HOME = "Home",
@@ -27,6 +27,10 @@ export const IMAGES = {
   LIKE: require("../../assets/icon/nav/like.png"),
   TALK: require("../../assets/icon/nav/talk.png"),
   PROFILE: require("../../assets/icon/nav/profile.png"),
+  GLAM: require("../../assets/icon/main/logo.png"),
+  INFO: require("../../assets/icon/main/info.png"),
+  SETTING: require("../../assets/icon/main/setting.png"),
+  BACK: require("../../assets/icon/profile_edit/back.png"),
 };
 
 export const NAV_ROUTES: Array<NavRouteInfo> = [
