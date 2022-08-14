@@ -7,7 +7,7 @@ import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 
 export type RootStackParamList = {
   Main: NavigatorScreenParams<BottomTabParamList>;
-  Profile: undefined;
+  ProfileEdit: undefined;
   NotFound: undefined;
 };
 
