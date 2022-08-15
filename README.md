@@ -3,22 +3,22 @@
 ### `메인 화면`
 
 - 오늘의 추천 카드  
-  ![Screenshot_1660573606.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eb02dd83-f7dc-4361-9e17-dde0461b4f00/Screenshot_1660573606.png)
+![Screenshot_1660573606](https://user-images.githubusercontent.com/49411767/184657827-02a02a7a-4b4f-4fd5-8f64-401b4368dab4.png)
 - 맞춤 추천  
-  ![Screenshot_1660573613.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd83ce7f-9ba9-4cff-8f7c-2f4e03f6dca4/Screenshot_1660573613.png)
+![Screenshot_1660573613](https://user-images.githubusercontent.com/49411767/184658100-0d53cf03-b673-48d4-b4ea-ffd7ef96b877.png)
 - 추가 추천  
-  ![Screenshot_1660573896.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8c771cc4-d318-479f-ab72-89267e7c5f5f/Screenshot_1660573896.png)
+![Screenshot_1660573896](https://user-images.githubusercontent.com/49411767/184658104-4ac06619-8823-4f0e-9dfe-e297af60ac8a.png)
 
 ### `프로필 수정 화면`
 
 - 기본 화면  
-  ![Screenshot_1660573641.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3ef2163c-0303-4257-8b39-b3ccfbc169d8/Screenshot_1660573641.png)
+![Screenshot_1660573641](https://user-images.githubusercontent.com/49411767/184658153-3e603979-bcd0-4a04-8af2-dd33942f94b0.png)
 - 모달 - `키`  
-  ![Screenshot_1660573656.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64c215f5-c1d8-4fce-bf02-a01aa1863115/Screenshot_1660573656.png)
+![Screenshot_1660573656](https://user-images.githubusercontent.com/49411767/184658165-d7999eb3-834f-432e-a5c0-14880e060cdd.png)
 - 모달 - `체형`  
-  ![Screenshot_1660573665.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4465481a-3474-4f77-ad6a-0db9940af520/Screenshot_1660573665.png)
+![Screenshot_1660573665](https://user-images.githubusercontent.com/49411767/184658234-53b2c8c0-285d-444d-acff-0674f3e3cbac.png)
 - 모달 - `학력`  
-  ![Screenshot_1660573671.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/629de3ea-48f8-4cdb-859a-481fdf12a9b6/Screenshot_1660573671.png)
+![Screenshot_1660573671](https://user-images.githubusercontent.com/49411767/184658249-f80f936b-ecb6-446c-8618-16c80148d16a.png)
 
 ## 사용된 모듈
 
