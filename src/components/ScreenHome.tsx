@@ -13,12 +13,13 @@ function ScreenHome() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsLoading(true);
     getTodayCardList();
-    getTodayCardList();
+    getAdditionalCardList();
   }, []);
 
   const getTodayCardList = async () => {
+    setIsLoading(true);
+
     try {
       const {
         data: { data },
@@ -33,8 +34,9 @@ function ScreenHome() {
   };
 
   const getAdditionalCardList = async () => {
+    setIsLoading(true);
+
     try {
-      setIsLoading(true);
       const {
         data: { data },
       } = await axios.get(CUPIST_URL.INRODUCTION_ADDITIONAL);
