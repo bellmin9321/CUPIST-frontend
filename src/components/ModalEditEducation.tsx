@@ -31,7 +31,6 @@ function ModalEditEducation({
   };
 
   const { educations } = dialogInfo;
-  console.log(educations);
 
   useEffect(() => {
     setEducationList(educations);

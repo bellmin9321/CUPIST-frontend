@@ -50,7 +50,7 @@ function ModalEditBodyType({
             return (
               <TouchableOpacity
                 style={styles.property}
-                onPress={(e: any) => editProperty(index)}>
+                onPress={() => editProperty(index)}>
                 <Text style={body_type === item ? { color: "#4B9CFF" } : null}>
                   {item.name}
                 </Text>

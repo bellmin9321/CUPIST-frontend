@@ -30,7 +30,7 @@ function ModalEditProperty({
     setOpenModalHeight(false);
   };
 
-  const { body_types, educations, height_range } = dialogInfo;
+  const { height_range } = dialogInfo;
 
   useEffect(() => {
     setHeightList(
@@ -54,7 +54,7 @@ function ModalEditProperty({
             return (
               <TouchableOpacity
                 style={styles.property}
-                onPress={(e: any) => editProperty(index)}>
+                onPress={() => editProperty(index)}>
                 <Text style={height === item ? { color: "#4B9CFF" } : null}>
                   {item}cm
                 </Text>
