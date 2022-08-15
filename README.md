@@ -22,24 +22,21 @@
 
 ## 사용된 모듈
 
-- `react-native CLI`
-- `typescript`
-- `@react-navigation/bottom-tabs`
-- `@react-navigation/material-top-tabs`
-- `@react-navigation/native`
-- `@react-navigation/stack`
-- `axios`
-- `react-native-gesture-handler`
-- `react-native-linear-gradient`
-- `react-native-modal`
-- `react-native-pager-view`
-- `react-native-safe-area-context`
-- `react-native-screens`
-- `react-native-tab-view`
-- `husky`
-- `lint-staged`
-- `eslint`
-- `prettier`
+- `react-native CLI` : react-native로 어플리케이션을 개발할 수 있게 도와주며 필요한 기능이 있는 경우, 모듈을 직접 만들어 사용할 수 있음. Android Emulator와 함께 사용
+- `typescript`: 동적 언어인 JS에 타입을 부여해서 에러를 사전에 방지할 수 있게 도와주며 코드 자동 완성과 가이드를 통해 쉽게 코드를 작성할 수 있게 도와줌
+- `@react-navigation/bottom-tabs` : 화면의 하단 탭 구성을 도와주는 navigation 라이브러리
+- `@react-navigation/material-top-tabs` : 화면의 상단 탭 구성을 도와주는 navigation 라이브러리 
+- `@react-navigation/stack` : 화면 간 이동을 도와주며 이동 시 stack에 이전의 navigation 정보를 저장
+- `axios` : 브라우저, Node.js를 위해 만들어진 Promise API를 활용하는 HTTP 비동기 통신 라이브러리
+- `react-native-gesture-handler` : 유저의 터치(제스쳐)를 다양하게 할 수 있게 도와주는 라이브러리
+- `react-native-linear-gradient` : CSS gradient 작업을 쉽게 도와주는 라이브러리
+- `react-native-modal` : react-native 전용 모달 생성 라이브러리
+- `react-native-pager-view` : 유저가 스와이핑해서 화면을 전환할 수 있게 도와주는 라이브러리
+- `react-native-safe-area-context` : React-native의 SafeAreaView를 보완해주는 라이브러리
+- `husky` : git hook을 편리하게 사용할 수 있게 만들어주는 도구
+- `lint-staged` : eslint 자동화 도구
+- `eslint`: JS, JSX 정적 분석 도구
+- `prettier` : 코드 스타일 변환 도구
 
 ## 구현 기술 리스트
 
