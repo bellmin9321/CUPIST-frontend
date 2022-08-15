@@ -1,24 +1,29 @@
 ## 📱스크린샷
 
-### 1. `메인 화면`
+### `메인 화면`
 
-- 오늘의 추천 카드  
-<img src="https://user-images.githubusercontent.com/49411767/184657827-02a02a7a-4b4f-4fd5-8f64-401b4368dab4.png" width="250" height="500" />
-- 맞춤 추천  
-<img src="https://user-images.githubusercontent.com/49411767/184658100-0d53cf03-b673-48d4-b4ea-ffd7ef96b877.png" width="250" height="500" />
-- 추가 추천  
+**1. 오늘의 추천**  
+<img src="https://user-images.githubusercontent.com/49411767/184657827-02a02a7a-4b4f-4fd5-8f64-401b4368dab4.png" width="250" height="500" />  
+
+**2. 맞춤 추천**  
+
+<img src="https://user-images.githubusercontent.com/49411767/184658100-0d53cf03-b673-48d4-b4ea-ffd7ef96b877.png" width="250" height="500" />  
+
+**3. 추가 추천**  
 <img src="https://user-images.githubusercontent.com/49411767/184658104-4ac06619-8823-4f0e-9dfe-e297af60ac8a.png" width="250" height="500" />
 
-## 2. `프로필 수정 화면`
+### `프로필 수정 화면`
 
-- 기본 화면  
-<img src="https://user-images.githubusercontent.com/49411767/184658153-3e603979-bcd0-4a04-8af2-dd33942f94b0.png" width="250" height="500" />
-- 모달  `키`  
-<img src="https://user-images.githubusercontent.com/49411767/184658165-d7999eb3-834f-432e-a5c0-14880e060cdd.png" width="250" height="500" />
-- 모달 - `체형`  
-<img src="https://user-images.githubusercontent.com/49411767/184658234-53b2c8c0-285d-444d-acff-0674f3e3cbac.png" width="250" height="500" />
-- 모달  `학력`  
-<img src="https://user-images.githubusercontent.com/49411767/184658249-f80f936b-ecb6-446c-8618-16c80148d16a.png" width="250" height="500" />
+**1. 기본 화면**  
+<img src="https://user-images.githubusercontent.com/49411767/184658153-3e603979-bcd0-4a04-8af2-dd33942f94b0.png" width="250" height="500" />  
+
+**2. 모달**1️⃣ `키`  
+<img src="https://user-images.githubusercontent.com/49411767/184658165-d7999eb3-834f-432e-a5c0-14880e060cdd.png" width="250" height="500" />  
+
+**3. 모달**2️⃣ `체형`   
+<img src="https://user-images.githubusercontent.com/49411767/184658234-53b2c8c0-285d-444d-acff-0674f3e3cbac.png" width="250" height="500" />  
+**4. 모달**3️⃣ `학력`  
+<img src="https://user-images.githubusercontent.com/49411767/184658249-f80f936b-ecb6-446c-8618-16c80148d16a.png" width="250" height="500" />  
 
 ## 🌈사용된 모듈
 
