@@ -74,7 +74,6 @@ function HomeCard({ item, index, cardList, setCardList }: Props) {
               )}
             </View>
           </LinearGradient>
-
           <View style={styles.buttonBox}>
             <TouchableOpacity
               style={styles.deleteBtn}

@@ -20,17 +20,22 @@ export const IMAGES = {
   LIKE: require("../../assets/icon/nav/like.png"),
   TALK: require("../../assets/icon/nav/talk.png"),
   PROFILE: require("../../assets/icon/nav/profile.png"),
+
   GLAM: require("../../assets/icon/main/logo.png"),
   INFO: require("../../assets/icon/main/info.png"),
   SETTING: require("../../assets/icon/main/setting.png"),
   DELETE: require("../../assets/icon/main/delete.png"),
+
   BACK: require("../../assets/icon/profile_edit/back.png"),
+  LOCK: require("../../assets/icon/profile_edit/lock.png"),
 
   TODAY: require("../../assets/icon/recommendations/today.png"),
   DIA: require("../../assets/icon/recommendations/dia.png"),
   GLAMOUR: require("../../assets/icon/recommendations/glamour.png"),
   WITHPET: require("../../assets/icon/recommendations/withpet.png"),
   HOT: require("../../assets/icon/recommendations/hot.png"),
+
+  PERSON: require("../../assets/image/person.png"),
 };
 
 export enum TabName {

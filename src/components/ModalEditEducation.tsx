@@ -50,7 +50,7 @@ function ModalEditEducation({
             return (
               <TouchableOpacity
                 style={styles.property}
-                onPress={(e: any) => editProperty(index)}>
+                onPress={() => editProperty(index)}>
                 <Text style={education === item ? { color: "#4B9CFF" } : null}>
                   {item.name}
                 </Text>
