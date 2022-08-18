@@ -22,7 +22,7 @@
   
 ### **2. 모달**1️⃣ `키`  
   
-<img src="https://user-images.githubusercontent.com/49411767/184658165-d7999eb3-834f-432e-a5c0-14880e060cdd.png" width="350" height="700" />  
+<img src="https://user-images.githubusercontent.com/49411767/185415520-6264d74d-4229-4d4c-b20a-718cd07b0c51.png" width="350" height="700" />  
   
   
 ### **3. 모달**2️⃣ `체형`   
