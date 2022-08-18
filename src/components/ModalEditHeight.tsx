@@ -48,20 +48,23 @@ function ModalEditProperty({
         <View style={styles.titlebox}>
           <Text style={styles.title}>키</Text>
         </View>
-        <FlatList
-          data={heightList}
-          renderItem={({ item, index }: { item: string; index: number }) => {
-            return (
-              <TouchableOpacity
-                style={styles.property}
-                onPress={() => editProperty(index)}>
-                <Text style={height === item ? { color: "#4B9CFF" } : null}>
-                  {item}cm
-                </Text>
-              </TouchableOpacity>
-            );
-          }}
-        />
+        <View style={styles.category}>
+          <FlatList
+            showsVerticalScrollIndicator={false}
+            data={heightList}
+            renderItem={({ item, index }: { item: string; index: number }) => {
+              return (
+                <TouchableOpacity
+                  style={styles.property}
+                  onPress={() => editProperty(index)}>
+                  <Text style={height === item ? { color: "#4B9CFF" } : null}>
+                    {item}cm
+                  </Text>
+                </TouchableOpacity>
+              );
+            }}
+          />
+        </View>
       </View>
     </Modal>
   );
@@ -73,7 +76,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "white",
     borderRadius: 15,
-    maxWidth: 612,
   },
   titlebox: {
     alignItems: "center",
@@ -86,6 +88,9 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize: 17,
     fontWeight: "bold",
+  },
+  category: {
+    height: 352,
   },
   property: {
     justifyContent: "center",

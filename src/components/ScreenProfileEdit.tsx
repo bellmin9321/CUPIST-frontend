@@ -31,8 +31,8 @@ function ScreenProfileEdit({ navigation }: Props) {
   const [openModalBodyType, setOpenModalBodyType] = useState<boolean>(false);
   const [openModalEducation, setOpenModalEducation] = useState<boolean>(false);
   const [newHeight, setNewHeight] = useState<number>(data?.height);
-  const [newBodyType, setNewBodyType] = useState<number>(data?.body_type);
-  const [newEducation, setNewEducation] = useState<number>(data?.education);
+  const [newBodyType, setNewBodyType] = useState<string>(data?.body_type);
+  const [newEducation, setNewEducation] = useState<string>(data?.education);
   const [dialogInfo, setDialogInfo] = useState({} as any);
 
   const {
